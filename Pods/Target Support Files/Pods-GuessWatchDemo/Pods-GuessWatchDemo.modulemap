@@ -1,0 +1,6 @@
+framework module Pods_GuessWatchDemo {
+  umbrella header "Pods-GuessWatchDemo-umbrella.h"
+
+  export *
+  module * { export * }
+}

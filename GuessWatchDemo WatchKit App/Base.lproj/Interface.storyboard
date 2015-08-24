@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="7706" systemVersion="14F27" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="AgC-eL-Hgc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="7701"/>
+    </dependencies>
+    <scenes>
+        <!--BaM-->
+        <scene sceneID="aou-V4-d1y">
+            <objects>
+                <controller title="BaM" id="AgC-eL-Hgc" customClass="InterfaceController" customModule="GuessWatchDemo_WatchKit_App" customModuleProvider="target">
+                    <items>
+                        <table alignment="left" id="C9J-ED-gzk">
+                            <items>
+                                <tableRow identifier="customTable" id="jZd-Vh-i1b" customClass="CustomTable" customModule="GuessWatchDemo_WatchKit_Extension">
+                                    <group key="rootItem" width="1" height="0.0" alignment="left" id="QB7-Eu-2CK">
+                                        <items>
+                                            <label alignment="left" verticalAlignment="center" text="Title" numberOfLines="0" id="v8O-tR-GHt">
+                                                <fontDescription key="font" type="system" pointSize="12"/>
+                                            </label>
+                                        </items>
+                                    </group>
+                                    <connections>
+                                        <outlet property="labelTitle" destination="v8O-tR-GHt" id="44o-mt-CIw"/>
+                                    </connections>
+                                </tableRow>
+                            </items>
+                        </table>
+                        <label alignment="center" verticalAlignment="center" text="努力加载中" id="tNh-uM-GZX">
+                            <color key="textColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                        </label>
+                        <button width="1" alignment="left" verticalAlignment="bottom" title="刷新" id="qux-cH-4sM">
+                            <color key="titleColor" red="0.98823535442352295" green="0.97254908084869385" blue="0.21568629145622253" alpha="1" colorSpace="deviceRGB"/>
+                            <connections>
+                                <action selector="refresh" destination="AgC-eL-Hgc" id="zME-lh-uL6"/>
+                            </connections>
+                        </button>
+                    </items>
+                    <connections>
+                        <outlet property="labelRemind" destination="tNh-uM-GZX" id="UOt-VG-aj8"/>
+                        <outlet property="table" destination="C9J-ED-gzk" id="jCi-AN-IYE"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="301" y="367"/>
+        </scene>
+        <!--答案-->
+        <scene sceneID="GHv-0y-bOK">
+            <objects>
+                <controller identifier="answerController" title="答案" id="0sd-1R-b8o" customClass="AnswerInterfaceController" customModule="GuessWatchDemo_WatchKit_Extension">
+                    <items>
+                        <label alignment="left" text="Title" numberOfLines="0" id="G3m-F4-l4q">
+                            <fontDescription key="font" type="system" pointSize="14"/>
+                        </label>
+                        <label alignment="left" text="Answer" numberOfLines="0" id="bNx-fT-ETx">
+                            <color key="textColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <fontDescription key="font" type="system" pointSize="18"/>
+                        </label>
+                    </items>
+                    <connections>
+                        <outlet property="labelAnswer" destination="bNx-fT-ETx" id="1t8-ey-6Ko"/>
+                        <outlet property="labelTitle" destination="G3m-F4-l4q" id="5MK-zU-k3P"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="495" y="367"/>
+        </scene>
+    </scenes>
+</document>

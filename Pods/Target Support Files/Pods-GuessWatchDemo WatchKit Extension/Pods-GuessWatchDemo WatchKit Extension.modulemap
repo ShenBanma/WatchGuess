@@ -1,0 +1,6 @@
+framework module Pods_GuessWatchDemo_WatchKit_Extension {
+  umbrella header "Pods-GuessWatchDemo WatchKit Extension-umbrella.h"
+
+  export *
+  module * { export * }
+}
